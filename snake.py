@@ -273,9 +273,10 @@ class Game:
                         self.snake.set_next_direction(RIGHT)
                     elif event.key == pygame.K_LSHIFT or event.key == pygame.K_RSHIFT:
                         self.snake.speed_boost = True
-                elif event.type == pygame.KEYUP:
-                    if event.key == pygame.K_LSHIFT or event.key == pygame.K_RSHIFT:
-                        self.snake.speed_boost = False
+            
+            if event.type == pygame.KEYUP:
+                if event.key == pygame.K_LSHIFT or event.key == pygame.K_RSHIFT:
+                    self.snake.speed_boost = False
         
         return True
     
